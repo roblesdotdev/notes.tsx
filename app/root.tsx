@@ -1,15 +1,15 @@
-import { LinksFunction } from "@remix-run/node";
+import { LinksFunction } from '@remix-run/node'
 import {
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from '@remix-run/react'
 import tailwindStyles from '~/styles/tailwind.css?url'
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: tailwindStyles }
+  { rel: 'stylesheet', href: tailwindStyles },
 ]
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -27,9 +27,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
-  );
+  )
 }
 
 export default function App() {
-  return <Outlet />;
+  return <Outlet />
 }
